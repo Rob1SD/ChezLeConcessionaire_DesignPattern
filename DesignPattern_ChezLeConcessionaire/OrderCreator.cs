@@ -8,6 +8,11 @@ namespace DesignPattern_ChezLeConcessionaire
     {
         enum PaymentType { Spot, Forward };
         private PaymentType paymentType;
+
+        OrderCreator(PaymentType pt)
+        {
+            paymentType = pt;
+        }
         public void CreateNewOrder()
         {
             IOrder order = CreateOrder();
